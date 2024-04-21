@@ -1,0 +1,9 @@
+p1=15*1.5^:CC1 p2=100*1.5^:CC2 p3=1100*1.5^:CC3 
+p4=12000*1.5^:CC4 p5=130000*1.5^:CC5 p6=1400000*1.5^:CC6 
+p7=20000000*1.5^:CC7 p8=330000000*1.5^:CC8 
+if :CCI==0 and :CCB==1 then :CCB=0 :CCC+=1 goto4 end goto 4+:CCB
+i=:CCI p=p1*(i==1)+p2*(i==2)+p3*(i==3)+p4*(i==4)+p5*(i==5)+p6*(i==6)
+p+=p7*(i==7)+p8*(i==8) if :CCC<p then :CCB=0 goto 4 end
+:CC1+=(:CCI==1) :CC2+=(:CCI==2) :CC3+=(:CCI==3) :CC4+=(:CCI==4)
+:CC5+=(:CCI==5) :CC6+=(:CCI==6) :CC7+=(:CCI==7) :CC8+=(:CCI==8)
+:CCC-=p :CCB=0 goto1

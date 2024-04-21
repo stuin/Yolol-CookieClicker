@@ -1,0 +1,4 @@
+s=:CC1*0.1+:CC2+:CC3*8+:CC4*47+:CC5*260+:CC6*1400+:CC7*7800+:CC8*44000
+:CCC+=s*0.4
+:CCC+=s*0.2 goto 3+:CCB*(:CCI!=0)
+:CCC+=s*0.2 goto 1+:CCB*3

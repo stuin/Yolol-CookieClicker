@@ -1,0 +1,19 @@
+:CCL=1 e="     " el=e+e+e+e+e e2=e+e+el e3=e+e+e+el e4=e+e+e+e+el
+dt=e+" Cookie Clicker"+e+el+"Cursor:   "+e3+"Grandma:  "+e3+"Farm:"+e4
+dt+="Mine:"+e4+"Factory:  "+e3+"Bank:"+e4+"Temple:   "+e3
+dt+="Wizard Tower:  "+e2 :CCX=1 :CCY=1 :CCH=220 :CCT=dt
+:CCL=2 t=1000 m=1000000 p="c/s - " c="c" co=" Cookies   "
+:CCX=4 :CCY=4 p1=15*1.5^:CC1 :CCT=:CC1+": "+(:CC1*0.1)+p+p1+c
+:CCX=4 :CCY=6 p2=100*1.5^:CC2 :CCT=:CC2+": "+(:CC2*1)+p+p2+c
+:CCX=4 :CCY=8 p3=1100*1.5^:CC3 :CCT=:CC3+": "+(:CC3*8)+p+p3+c
+:CCX=4 :CCY=10 p4=12000*1.5^:CC4 :CCT=:CC4+": "+(:CC4*47)+p+p4+c
+:CCX=4 :CCY=12 p5=130000*1.5^:CC5 :CCT=:CC5+": "+(:CC5*260)+p+p5+c
+:CCX=4 :CCY=14 p6=1400000*1.5^:CC6 :CCT=:CC6+": "+(:CC6*1400)+p+p6+c
+:CCX=4 :CCY=16 p7=20*m*1.5^:CC7 :CCT=:CC7+": "+(:CC7*7800)+p+p7+c
+:CCX=4 :CCY=18 p8=330*m*1.5^:CC8 :CCT=:CC8+": "+(:CC8*44000)+p+p8+c
+:CCX=2 :CCY=2+:CCI*2 :CCT=">>" :CCH=40 goto16
+:CCX=2 :CCY=2+:CCI*2 :CCT="  " :CCI+=1 :CCN=0 goto14
+:CCX=4 :CCY=2 :CCT=:CCC+co goto 16+:CCN+:CCB*2*(:CCI!=0)
+:CCX=2 :CCY=2+:CCI*2 :CCT="  " :CCI-=1 :CCN=0 goto14
+:CCX=2 :CCY=2+:CCI*2 :CCT="  " :CCN=0
+:CCX=4 :CCY=2 :CCT=:CCC+co if :CCB!=0 then goto19 end goto6
